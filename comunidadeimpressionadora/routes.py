@@ -100,9 +100,11 @@ def atualizar_cursos(form):
         if 'curso_' in campo.name:
             if campo.data:
                 lista_cursos.append(campo.label.text)
-                return ';'.join(lista_cursos)
-            else:
-                return Usuario.cursos
+    if lista_cursos == []:
+        return Usuario.cursos
+    else:
+        return ';'.join(lista_cursos)
+
 
 
 
