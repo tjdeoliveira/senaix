@@ -15,9 +15,42 @@ def home():
     return render_template('home.html', posts=posts)
 
 
-@app.route('/contato')
+@app.route('/cursos')
 def contato():
     return render_template('contato.html')
+
+@app.route('/Administração')
+def Administração():
+    return render_template('Administracão.html')
+
+@app.route('/Mecatrônica')
+def Mecatrônica():
+    return render_template('Mecatrônica.html')
+
+@app.route('/Logística')
+def Logística():
+    return render_template('Logística.html')
+
+@app.route('/biblioteca')
+@login_required
+def biblioteca():
+    return render_template('biblioteca.html')
+
+@app.route('/segundavia')
+@login_required
+def segundavia():
+    return render_template('segundavia.html')
+
+@app.route('/comprovante')
+@login_required
+def comprovante():
+    return render_template('comprovante.html')
+
+
+@app.route('/servicos')
+@login_required
+def servicos():
+    return render_template('servicos.html')
 
 
 @app.route('/usuarios')

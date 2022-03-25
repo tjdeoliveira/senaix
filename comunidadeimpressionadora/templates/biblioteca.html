@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<fieldset class="borda_pesquisa"><legend class="txt_acervo_legend">Pesquisa Geral</legend>
+                                                                <div class="pmu_linha">
+                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                        <tbody><tr>
+                                                                                <td width="10" nowrap="nowrap">
+                                                                                <div></div>
+                                                                                </td>
+                                                                                <td width="245" nowrap="nowrap">
+                                                                                <div class="mobile_button"><input name="termo_para_pesquisa" type="text" class="pmu_campo" id="termo_para_pesquisa" value="" maxlength="255" autocomplete="off" onfocus="this.className='pmu_campo2';if(this.value.trim()=='Digite o termo para a pesquisa')this.value='';" onblur="this.className='pmu_campo';if(this.value.trim()=='')this.value='Digite o termo para a pesquisa';">
+                                                                                </div>
+                                                                                <div class="mobile_button1">
+                                                                                <table border="0" cellspacing="0" cellpadding="0">
+                                                                                        <tbody><tr>
+                                                                                                <td width="10" nowrap="nowrap">
+                                                                                                <div></div>
+                                                                                                </td>
+                                                                                                <td width="110"><input type="submit" name="pesq" id="pesq" value="Pesquisar" class="pmu_btn11" onclick="document.pesquisas.codigo_autoridade.value='';get_result('0');">
+
+
+                                                                                                </td>
+
+                                                                                                <td width="120"><input type="button" name="clear" id="clear" value="Limpar" class="pmu_btn22"></td>
+                                                                                                <td><span id="carregar" style="display: none;"> <img src="../img/loading.gif" alt="">&nbsp;<a href="javascript:pararPesquisa();" class="link_parar"> Interromper                                                                                                </a> </span>&nbsp;</td>
+
+{% endblock %}
